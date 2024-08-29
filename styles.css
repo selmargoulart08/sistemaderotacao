@@ -1,0 +1,211 @@
+body {
+    margin: 0%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    overflow: hidden;
+}
+
+.conteiner {
+    font-size: 10px;
+    height: 1000px;
+    width: 1000px;
+    position: relative;
+}
+
+.sol {
+    background-color: #ffea00;
+    position: absolute;
+    top: 420px;
+    left: 420px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 48px #ffea00,  
+        0 0 100px #ffea00, 
+        0 0 200px #ffea00; 
+}
+
+.mercurio, .venus, .terra, .lua, .marte, .jupiter, .saturno, .urano, .netuno {
+    position: absolute;
+    border-style: solid;
+    border-width: #fff transparent transparent transparent;
+    border-width: 1.6px 1.6px 0 0;
+    border-radius: 50%;
+}
+
+.mercurio {
+    top: 360px;
+    left: 360px;
+    height: 280px;
+    width: 280px;
+    animation: orbit 7.6s linear infinite;
+}
+
+.venus {
+    top: 320px;
+    left: 320px;
+    height: 360px;
+    width: 360px;
+    animation: orbit 19s linear infinite;
+}
+
+.terra {
+    top: 280px;
+    left: 280px;
+    height: 440px;
+    width: 440px;
+    animation: orbit 76.5s linear infinite;
+}
+
+.lua {
+    top: 0px;
+    right: 0px;
+    height: 128px;
+    width: 128px;
+    animation: orbit 22.7s linear infinite;
+}
+
+.marte {
+    top: 240px;
+    left: 240px;
+    height: 520px;
+    width: 520px;
+    animation: orbit 68.7s linear infinite;
+}
+
+.jupiter {
+    top: 160px;
+    left: 160px;
+    height: 680px;
+    width: 680px;
+    animation: orbit 433.3s linear infinite;
+}
+
+.saturno {
+    top: 120px;
+    left: 120px;
+    height: 760px;
+    width: 760px;
+    animation: orbit 1075.9s linear infinite;
+}
+
+.urano {
+    top: 80px;
+    left: 80px;
+    height: 840px;
+    width: 840px;
+    animation: orbit 3068.6s linear infinite;
+}
+
+.netuno {
+    top: 40px;
+    left: 40px;
+    height: 920px;
+    width: 920px;
+    animation: orbit 6019.6s linear infinite;
+}
+
+.mercurio::before,
+.venus::before,
+.terra::before,
+.lua::before,
+.marte::before,
+.jupiter::before,
+.saturno::before,
+.urano::before,
+.netuno::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.mercurio::before {
+    top: 120px;
+    right: 120px;
+    width: 16px;
+    height: 16px;
+    background-color: gray;
+    box-shadow: 0 0 10px gray;
+}
+
+.venus::before {
+    top: 160px;
+    right: 160px;
+    width: 24px;
+    height: 24px;
+    background-color: yellow;
+    box-shadow: 0 0 15px yellow;
+}
+
+.terra::before {
+    top: 44.8px;
+    right: 44.8px;
+    width: 48px;
+    height: 48px;
+    background-color: aqua;
+    box-shadow: 0 0 20px aqua;
+}
+
+.lua::before {
+    top: 12.8px;
+    right: 3.2px;
+    width: 19.2px;
+    height: 19.2px;
+    background-color: gray;
+    box-shadow: 0 0 10px gray;
+}
+
+.marte::before {
+    top: 40px;
+    right: 40px;
+    width: 32px;
+    height: 32px;
+    background-color: red;
+    box-shadow: 0 0 20px red;
+}
+
+.jupiter::before {
+    top: 64px;
+    right: 64px;
+    width: 96px;
+    height: 96px;
+    background-color: orange;
+    box-shadow: 0 0 30px orange;
+}
+
+.saturno::before {
+    top: 80px;
+    right: 80px;
+    width: 72px;
+    height: 72px;
+    background-color: gold;
+    box-shadow: 0 0 25px gold;
+}
+
+.urano::before {
+    top: 100px;
+    right: 100px;
+    width: 48px;
+    height: 48px;
+    background-color: lightblue;
+    box-shadow: 0 0 20px lightblue;
+}
+
+.netuno::before {
+    top: 120px;
+    right: 120px;
+    width: 48px;
+    height: 48px;
+    background-color: blue;
+    box-shadow: 0 0 20px blue;
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
